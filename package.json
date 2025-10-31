@@ -34,7 +34,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DrTrips-Comp/frankfurter-mcp-server.git"
+    "url": "git+https://github.com/DrTrips-Comp/frankfurter-mcp-server.git"
   },
   "bugs": {
     "url": "https://github.com/DrTrips-Comp/frankfurter-mcp-server/issues"
