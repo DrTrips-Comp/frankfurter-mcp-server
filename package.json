@@ -4,20 +4,42 @@
   "description": "MCP server for currency exchange operations using Frankfurter API",
   "main": "dist/index.js",
   "type": "module",
+  "bin": {
+    "frankfurter-mcp-server": "dist/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/index.js",
+    "prepublishOnly": "npm run build",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "mcp",
+    "model-context-protocol",
     "currency",
     "exchange-rates",
-    "frankfurter"
+    "frankfurter",
+    "currency-converter",
+    "forex",
+    "llm",
+    "claude"
   ],
-  "author": "",
+  "author": "DrTrips",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DrTrips-Comp/frankfurter-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DrTrips-Comp/frankfurter-mcp-server/issues"
+  },
+  "homepage": "https://github.com/DrTrips-Comp/frankfurter-mcp-server#readme",
   "engines": {
     "node": ">=18"
   },

@@ -20,10 +20,21 @@ A Model Context Protocol (MCP) server that provides currency exchange operations
 - Node.js >= 18
 - npm or yarn
 
-### Setup
+### Option 1: Install from npm (Recommended)
 
 ```bash
-# Clone or download this repository
+# Install globally
+npm install -g frankfurter-mcp-server
+
+# Or use with npx (no installation required)
+npx frankfurter-mcp-server
+```
+
+### Option 2: Install from source
+
+```bash
+# Clone the repository
+git clone https://github.com/DrTrips-Comp/frankfurter-mcp-server.git
 cd frankfurter-mcp-server
 
 # Install dependencies
@@ -43,12 +54,39 @@ Add this server to your Claude Desktop configuration:
 **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 **Windows**: `%APPDATA%/Claude/claude_desktop_config.json`
 
+### Using npx (Recommended)
+
+```json
+{
+  "mcpServers": {
+    "frankfurter": {
+      "command": "npx",
+      "args": ["-y", "frankfurter-mcp-server"]
+    }
+  }
+}
+```
+
+### Using global installation
+
+```json
+{
+  "mcpServers": {
+    "frankfurter": {
+      "command": "frankfurter-mcp-server"
+    }
+  }
+}
+```
+
+### Using local installation
+
 ```json
 {
   "mcpServers": {
     "frankfurter": {
       "command": "node",
-      "args": ["/absolute/path/to/drtrips-currency-mcp/dist/index.js"]
+      "args": ["/absolute/path/to/frankfurter-mcp-server/dist/index.js"]
     }
   }
 }
